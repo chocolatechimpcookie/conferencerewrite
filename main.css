@@ -31,12 +31,14 @@ html
 
 .body_outline
 {
-    border-radius:20px;
+    color:white;
+    background:#082857;
+
 /*    border:2px solid #082857;*/
 /*background-color: #14A3F2;*/
 
 }
-.tophead
+.outcontainer
 {
       background:#082857;
       color:#14A3F2;
@@ -45,16 +47,16 @@ html
 */    /*border: 4px solid #082857;*/
 }
 
-.tophead small
+/*.sitename small
 {
     color:#14A3F2;
-}
+}*/
 
 .main_menu
 {
     padding:0;
     margin:0;
-    border:0;
+    border:1px solid;
     background:#082857;
 
     
@@ -100,10 +102,63 @@ html
 }
 
 
+
+.main_menu_mob
+{
+    padding:0;
+    margin:0;
+    border:0;
+    background:#082857;
+    border: 4px solid;
+
+    
+}
+
+.main_menu_mob > li > ul
+{
+    background:#14A3F2;
+}
+
+.main_menu_mob ul
+{
+  color:#14A3F2;
+  
+  
+}
+
+.main_menu_mob li
+{
+        display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+.main_menu_mob a:hover
+{
+	color:#14A3F2;
+}
+
+.main_menu_mob a:active
+{
+	color:#14A3F2;
+}
+
+.main_menu_mob a:checked
+{
+	color:#14A3F2;
+}
+
+.main_menu_mob a:after
+{
+	color:#14A3F2;
+}
+
 .home_icon
 {
     width:30px;
     height:22px;
+    border:2px solid #14A3F2;
+    border-radius:10px;
+    /*border:2px solid #082857;*/
 }
 
 
@@ -129,6 +184,11 @@ html
 {
     background-color:#FFFFFF;
     
+}
+
+.lightblue_text
+{
+    color:#14A3F2;
 }
 
 
