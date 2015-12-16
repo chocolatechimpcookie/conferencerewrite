@@ -1,0 +1,122 @@
+/*What kind of colors to use? original ones
+
+White text #FFFFFF
+Lighter blue: #14A3F2
+Darker blue: #082857
+Darkest blue: #05132E
+
+Background? I'm thinking black, no image background.
+
+Links should probably have color variation
+
+
+*/
+.body_outline
+{
+    border-radius:20px;
+/*    border:2px solid #082857;*/
+/*background-color: #14A3F2;*/
+
+}
+.tophead
+{
+    border-radius: 20px;
+    border: 4px solid #082857;
+}
+
+.main_menu
+{
+    padding:0;
+    margin:0;
+    border:0;
+    background:#082857;
+    width:auto;
+}
+
+.main_menu > li > ul
+{
+    background:#14A3F2;
+}
+
+.main_menu > li a:hover
+{
+  color:#14A3F2;  
+}
+
+
+.main_menu a:hover
+{
+	color:#14A3F2;
+}
+
+.main_menu a:active
+{
+	color:#14A3F2;
+}
+
+.main_menu a:checked
+{
+	color:#14A3F2;
+}
+
+.main_menu a:after
+{
+	color:#14A3F2;
+}
+
+
+.home_icon
+{
+    width:30px;
+    height:22px;
+}
+
+
+.center
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    
+}
+
+
+
+.white_text
+{
+    color:#FFFFFF;
+    
+}
+
+
+.white_back
+{
+    background-color:#FFFFFF;
+    
+}
+
+
+
+.lightblue_back
+{
+    background-color:#14A3F2;
+}
+
+.darkblue_back
+{
+    background-color:#082857;
+}
+
+
+.darkest_back
+{
+    background-color:#05132E;
+    
+}
+
+.nested_text
+{
+    color:#05132E;
+    
+}
