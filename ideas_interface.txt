@@ -1,0 +1,19 @@
+-Mobile vs other sizes
+	1)maybe make one into container and other into container-fluid.
+	2) Use one container, but use hidden and visible to arrange things within
+		This is what I am already doing./
+
+Simplify offsets using col-sm
+Everything needs to be *consistent*
+
+
+Two ideas for Mobile version
+	-1) Break between image and content
+	-2) Spacing like with larger screens except with more spacing with the offset.
+	-3)Use entirety of spacing available
+
+Ideas for regular version:
+	-1) Use offsets- Already doing this, what kind though?
+		A)Each might need an offset
+		B) Varies on content
+	-2)Use offsets and center

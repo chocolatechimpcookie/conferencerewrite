@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>World Congress CS-IT Conferences Home Page</title>
+    <title>Reviewer Register</title>
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -60,7 +60,7 @@
 				<ul class="dropdown-menu">
 					<li><a href="reviewer_login.html" id="reviewerlog_link_wide"> <span class="nested_text" id="reviewerlog_text_wide">Login</span></a></li>
 					<li><a href="reviewer_reg.html" > <span class="nested_text">Registration</span></a></li>
-					<li><a href="#"> <span class="nested_text">Submit Paper</span></a></li>
+					<li><a href="submitpaper.html"> <span class="nested_text">Submit Paper</span></a></li>
 				</ul>
 			</li>
 			
@@ -119,7 +119,7 @@
 			<ul class="dropdown-menu">
 				<li><a href="reviewer_login.html" id="reviewerlog_link_mob"> <span class="nested_text" id="reviewerlog_text_mob">Login</span></a></li>
 				<li><a href="reviewer_reg.html" > <span class="nested_text">Registration</span></a></li>
-				<li><a href="#"> <span class="nested_text">Submit Paper</span></a></li>
+				<li><a href="submitpaper.html"> <span class="nested_text">Submit Paper</span></a></li>
 			</ul>
 		</li>
 		
@@ -137,9 +137,24 @@
 
 
    <div class="body_outline">
-	<h2>Welcome to the Home Page</h2>
+	<h2 class="page-header">Register as a Reviewer!</h2>
     
-    
+    	<form method="post">
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" name="username" id="username">
+		</div>
+		
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input class="form-control" type="password" name="password" id="password"/>
+		</div>
+		
+	
+			
+		<input style="cursor:pointer" type="submit" value="Submit" class="btn btn-success" />
+		<input style="cursor:pointer" type="reset" class="btn btn-warning" />
+		</form>
     
     
     
