@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>World Congress CS-IT Conferences Home Page</title>
+    <title>Register for the Conference</title>
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -136,15 +136,84 @@
 </div>
 
 
-   <div class="body_outline">
-	<h2>Welcome to the Home Page</h2>
+	<div class="body_outline">
+		<h2 class="page-header">Register for the Conference</h2>
+    
+		<form method="post">
+			<label for="person_title">Title</label>
+			<div class="radio"><label>
+				<input type="radio" value="Mr" name="person_title" id="person_title">Mr
+			</label></div>
+			<div class="radio"><label>
+				<input type="radio" value="Ms" name="person_title" id="person_title">Ms
+			</label></div>
+			<div class="radio"><label>
+				<input type="radio" value="Mrs" name="person_title" id="person_title">Mrs
+			</label></div>
+			<div class="radio"><label>
+				<input type="radio" value="Mx" name="person_title" id="person_title">Mx
+			</label></div>
+			<div class="radio"><label>
+				<input type="radio" value="Mr" name="person_title" id="person_title">Dr
+			</label></div>
+				
+				
+				
+			<div class="form-group">
+			<label for="firstname">First Name</label>
+			<input class="form-control" type="text" name="firstname" id="firstname"/>
+			</div>
+					
+			<div class="form-group">
+			<label for="lastname">Last Name</label>
+			<input class="form-control" type="text" name="lastname" id="lastname"/>
+			</div>
+								
+			<div class="form-group">
+			<label for="organization">Organization</label>
+			<input class="form-control" type="text" name="organization" id="organization"/>
+			</div>
+											
+			<div class="form-group">
+			<label for="address">Address</label>
+			<input class="form-control" type="text" name="address" id="address"/>
+			</div>
+														
+			<div class="form-group">
+			<label for="telephone">Telephone</label>
+			<input class="form-control" type="tel" name="telephone" id="telephone"/>
+			</div>
+																	
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input class="form-control" type="email" name="email" id="email"/>
+			</div>
+			
+		
+			<label for="attendee_type">Are you an/a</label>
+			<div class="radio"><label>
+				<input type="radio" value="Author" name="attendeetype" id="attendeetype" />Author
+			</label></div>
+			<div class="radio"><label>
+				<input type="radio" value="Student" name="attendeetype" id="attendeetype"/>Student
+			</label></div>
+			<div class="radio"><label>
+				<input type="radio" value="Regular Attendee" name="attendeetype" id="attendeetype" />Regular Attendee
+			</label></div>
+			<br>
+
+		
+
+
+			
+			<input style="cursor:pointer" type="submit" value="Submit" class="btn btn-success" />
+			<input style="cursor:pointer" type="reset"   />
+		</form>
     
     
     
     
-    
-    
-   </div>
+	</div>
     
 </div>
 </div>   
