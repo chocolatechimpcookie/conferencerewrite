@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>World Congress CS-IT Conferences Home Page</title>
+    <title>Comments</title>
     <link rel="stylesheet" type="text/css" href="../main.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
@@ -12,10 +12,11 @@
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 
-
+<!--Is outcontainer just the top or the rest of the page
+It's out container because its outside the container
+-->
 <body>
-	<div class="outcontainer">
-
+<div class="outcontainer">
 <div class="container-fluid">
 <div class="row">
 <div class="col-xs-12">
@@ -74,8 +75,9 @@
 			
 		</ul>
 	</nav>
-		
-	</div>	
+	</div>
+	
+<!--	headercus and nav-->
 		
 <!--horizontal version		-->
 	<div class="headercus visible-xs">
@@ -85,7 +87,7 @@
 	<ul class="nav nav-pills nav-stacked main_menu_mob">
 
 		<li role="presentation">
-			<a href="index.html" class="nav-brand">
+			<a href="../index.html" class="nav-brand">
 			<img class="home_icon" alt="Brand" title="Home" src="http://2.bp.blogspot.com/-s8V9Gc7WBpc/U3Hbfxz_GvI/AAAAAAAACns/CN1NRR-Q8P4/s1600/App+terminal.png" /> </a>
 		</li>
 		
@@ -133,23 +135,52 @@
 		
 	</ul>
 	</nav>
-</div>
+	</div> 
 
+<!--^Headercus -->
 
    <div class="body_outline">
-	<h2>Welcome to the Home Page</h2>
+        <h1 class="page-header">Comments? <small class="small_white">Let us know!</small></h1>
+
+ 
+		
+		<div class="row">
+        <div class="col-xs-2">
+			<img class="enlarge" src="../images/comments.jpg" alt="comments_picture" title="" height="250" width="200"><br><br>
+		</div>
+	
+		<div class="col-xs-offset-3 col-sm-offset-1 col-md-offset-1 col-lg-offset-1 col-xs-6">
+			<form method="post">
+				<div class="form-group">
+					<label for="fullname">Name</label>
+					<input type="text" class="form-control" name="fullname" id="fullname">
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input class="form-control" type="email" name="email" id="email"/>
+				</div>
+				
+				<div class="form-group">
+					<label for="comments">Comments</label>
+					<textarea class="form-control" name="comments" id="comments"></textarea>
+				</div>
+				
+					<input style="cursor:pointer" type="reset" class="btn btn-warning" />
+					<input style="cursor:pointer" type="submit" value="Submit" class="btn btn-success" />
+			</form>
+		</div>
+		</div>
+	</div>
     
     
     
-    
-    
-    
-   </div>
     
 </div>
 </div>   
 </div>
-<!--^container-fluid, parent row and parent col-xs-12-->
+</div>
+<!--^container-fluid, parent row and parent col-xs-12 and out container-->
 
 
 </body>

@@ -12,12 +12,15 @@ Links should probably have color variation
 
 */
 
-
+.small_white small
+{
+color:white;
+}
 
 
 html
 {
-              background:#082857;
+background:#082857;
 
 }
 
