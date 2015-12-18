@@ -1,0 +1,191 @@
+#!/usr/bin/env python2
+print("Content-Type: text/html\n\n")  # html markup follows
+import urllib
+
+
+#f = codecs.open(\'../html/comments.html\', \'r\', \'utf-8\')
+
+#page2 = urllib.urlopen("../html/comments.html").read()
+#print page
+
+print("""
+<head>
+    <title>Comments</title>
+    <link rel=\'stylesheet\' type=\'text/css\' href=\'../main.css\'> 
+    <link rel=\'stylesheet\' href=\'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\'>
+
+	<!-- jQuery library -->
+	<script src=\'https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js\'></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src=\'http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js\'></script>
+</head>
+
+<!--Is outcontainer just the top or the rest of the page
+It\'s out container because its outside the container
+-->
+<body>
+<div class=\'outcontainer\'>
+<div class=\'container-fluid\'>
+<div class=\'row\'>
+<div class=\'col-xs-12\'>
+	<div class=\'headercus hidden-xs\'>
+		 <h2 class=\'center lightblue_text\'>World Congress<small class=\'lightblue_text\'>  CS-IT Conferences</small></h2>
+		<nav class=\'navbar navbar-default\'>
+		<ul class=\'nav nav-pills main_menu\'>
+	
+			<li role=\'presentation\'>
+				<a href=\'../index.html\' class=\'nav-brand\'>
+				<img class=\'home_icon\' alt=\'Brand\' title=\'Home\' src=\'http://2.bp.blogspot.com/-s8V9Gc7WBpc/U3Hbfxz_GvI/AAAAAAAACns/CN1NRR-Q8P4/s1600/App+terminal.png\' /> </a>
+			</li>
+			
+			<!-- credit for icon: http://www.beopensource.com/2014/05/keyboard-shortcuts-within-terminal.html -->
+	
+			<li role=\'presentation\'>
+				<a href=\'dates.html\' >Dates</a></li>
+			
+			<li role=\'presentation\' class=\'dropdown\'>	
+			<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\' aria-haspopup=\'true\' aria-expanded=\'false\'>Conference Information<span class=\'caret\'></span></a> 	
+				<ul class=\'dropdown-menu\'>
+					<li><a href=\'about_conf.html\'><span class=\'nested_text\'>About the Conference</span></a></li>
+					<li><a href=\'fee.html\'><span class=\'nested_text\'>Conference Fee</span></a></li>
+					<li><a href=\'hotel_info.html\'><span class=\'nested_text\'>Hotel Information</span></a></li>
+					<li><a href=\'conf_register.html\'><span class=\'nested_text\'>Conference Registration</span></a></li>
+					<li><a href=\'program.html\'><span class=\'nested_text\'>Conference Program</span></a></li>
+					<li><a href=\'guidelines.html\'><span class=\'nested_text\'>Guidelines</span></a></li>
+					<li><a href=\'keynote.html\'><span class=\'nested_text\'>Keynote Speakers</span></a></li>
+					<li><a href=\'call.html\'><span class=\'nested_text\'>Call for Paper</span></a></li>
+					<li><a href=\'major.html\'><span class=\'nested_text\'>Major Areas</span></a></li>
+	
+				</ul>
+			</li>
+			
+			<li role=\'presentation\'>
+				<a href=\'comments.html\' role=\'button\'>Comments</a>
+	
+			</li>
+			<li role=\'presentation\' class=\'dropdown\'>
+				<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\'>Reviewer<span class=\'caret\'></span></a>
+				<ul class=\'dropdown-menu\'>
+					<li><a href=\'reviewer_login.html\' id=\'reviewerlog_link_wide\'> <span class=\'nested_text\' id=\'reviewerlog_text_wide\'>Login</span></a></li>
+					<li><a href=\'reviewer_reg.html\' > <span class=\'nested_text\'>Registration</span></a></li>
+					<li><a href=\'submitpaper.html\'> <span class=\'nested_text\'>Submit Paper</span></a></li>
+				</ul>
+			</li>
+			
+			<li role=\'presentation\' class=\'dropdown\'>
+				<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\'>Administration<span class=\'caret\'></span></a>
+				<ul class=\'dropdown-menu\'>
+					<li><a href=\'admin_login.html\' id=\'adminlog_link_wide\'> <span class=\'nested_text\' id=\'adminlog_text_wide\'>Login</span></a></li>
+					<li><a href=\'admin_manage.html\'> <span class=\'nested_text\'>Management</span></a></li>
+				</ul>
+			</li>
+			
+		</ul>
+	</nav>
+	</div>
+	
+<!--	headercus and nav-->
+		
+<!--horizontal version		-->
+	<div class=\'headercus visible-xs\'>
+	<h2 class=\'center lightblue_text\'>World Congress<small class=\'lightblue_text\'>  CS-IT Conferences</small></h2>
+
+	<nav class=\'navbar navbar-default\'>
+	<ul class=\'nav nav-pills nav-stacked main_menu_mob\'>
+
+		<li role=\'presentation\'>
+			<a href=\'../index.html\' class=\'nav-brand\'>
+			<img class=\'home_icon\' alt=\'Brand\' title=\'Home\' src=\'http://2.bp.blogspot.com/-s8V9Gc7WBpc/U3Hbfxz_GvI/AAAAAAAACns/CN1NRR-Q8P4/s1600/App+terminal.png\' /> </a>
+		</li>
+		
+		<!-- credit for icon: http://www.beopensource.com/2014/05/keyboard-shortcuts-within-terminal.html -->
+
+		<li role=\'presentation\'>
+			<a href=\'dates.html\' >Dates</a></li>
+		
+		<li role=\'presentation\' class=\'dropdown\'>	
+		<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\' aria-haspopup=\'true\' aria-expanded=\'false\'>Conference Information<span class=\'caret\'></span></a> 	
+			<ul class=\'dropdown-menu\'>
+				<li><a href=\'about_conf.html\'><span class=\'nested_text\'>About the Conference</span></a></li>
+				<li><a href=\'fee.html\'><span class=\'nested_text\'>Conference Fee</span></a></li>
+				<li><a href=\'hotel_info.html\'><span class=\'nested_text\'>Hotel Information</span></a></li>
+				<li><a href=\'conf_register.html\'><span class=\'nested_text\'>Conference Registration</span></a></li>
+				<li><a href=\'program.html\'><span class=\'nested_text\'>Conference Program</span></a></li>
+				<li><a href=\'guidelines.html\'><span class=\'nested_text\'>Guidelines</span></a></li>
+				<li><a href=\'keynote.html\'><span class=\'nested_text\'>Keynote Speakers</span></a></li>
+				<li><a href=\'call.html\'><span class=\'nested_text\'>Call for Paper</span></a></li>
+				<li><a href=\'major.html\'><span class=\'nested_text\'>Major Areas</span></a></li>
+
+			</ul>
+		</li>
+		
+		<li role=\'presentation\'>
+			<a href=\'comments.html\' role=\'button\'>Comments</a>
+
+		</li>
+		<li role=\'presentation\' class=\'dropdown\'>
+			<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\'>Reviewer<span class=\'caret\'></span></a>
+			<ul class=\'dropdown-menu\'>
+				<li><a href=\'reviewer_login.html\' id=\'reviewerlog_link_mob\'> <span class=\'nested_text\' id=\'reviewerlog_text_mob\'>Login</span></a></li>
+				<li><a href=\'reviewer_reg.html\' > <span class=\'nested_text\'>Registration</span></a></li>
+				<li><a href=\'submitpaper.html\'> <span class=\'nested_text\'>Submit Paper</span></a></li>
+			</ul>
+		</li>
+		
+		<li role=\'presentation\' class=\'dropdown\'>
+			<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\'>Administration<span class=\'caret\'></span></a>
+			<ul class=\'dropdown-menu\'>
+				<li><a href=\'admin_login.html\' id=\'adminlog_link_mob\'> <span class=\'nested_text\' id=\'adminlog_text_mob\'>Login</span></a></li>
+				<li><a href=\'admin_manage.html\'> <span class=\'nested_text\'>Management</span></a></li>
+			</ul>
+		</li>
+		
+	</ul>
+	</nav>
+	</div> 
+
+<!--^Headercus -->
+
+   <div class=\'body_outline\'>
+        <h1 class=\'page-header\'>Comments? <small class=\'small_white\'>Let us know!</small></h1>
+
+ 
+
+
+		
+		
+
+			<img class=\'enlarge\' src=\'../images/comments.jpg\' alt=\'comments_picture\' title=\'\' height=\'250\' width=\'200\'><br><br>
+	
+			<form action=\'../cgiscripts/commentsscript.cgi\' method=\'post\'>
+				<div class=\'form-group\'>
+					<label for=\'fullname\'>Name</label>
+					<input type=\'text\' class=\'form-control\' name=\'fullname\' id=\'fullname\'>
+				</div>
+				
+				<div class=\'form-group\'>
+					<label for=\'email\'>Email</label>
+					<input class=\'form-control\' type=\'email\' name=\'email\' id=\'email\'/>
+				</div>
+				
+				<div class=\'form-group\'>
+					<label for=\'comments\'>Comments</label>
+					<textarea class=\'form-control\' name=\'comments\' id=\'comments\'></textarea>
+				</div>
+				
+					<input style=\'cursor:pointer\' type=\'submit\' value=\'Submit\' class=\'btn btn-success\' />
+					<input style=\'cursor:pointer\' type=\'reset\' class=\'btn btn-warning\' />
+
+			</form>
+	</div>
+    
+    
+</div>
+</div>   
+</div>
+</div>
+<!--^container-fluid, parent row and parent col-xs-12 and out container-->
+
+
+</body> """)

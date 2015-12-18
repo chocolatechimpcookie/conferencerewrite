@@ -1,19 +1,35 @@
- #!/usr/bin/env python
- # -*- coding: UTF-8 -*-
-# print "Content-Type: text/plain;charset=utf-8"
+#!/usr/bin/env python3
 
+print("Content-Type: text/html\n\n")  # html markup follows
+
+
+#it prints html
+# but it won't send db
+#will execute by bash but not through the server in anyway
+
+print("""
+<html>
+  <Title>Hello in HTML</Title>
+<body>
+  <p>Hello There!</p>
+  <p><b>Hi There!</b></p>  
+</body>
+</html> """)
 
 #This will take the comments and send it to the database
 import mysql.connector
 import web
 
 from mysql.connector import Error
-import cgi, cgitb
+import cgi
+import cgitb
 
 #chi and cgitb are for cgi handling
 # app = web.application(urls, globals())
 
-cgit.enable()
+cgitb.enable()
+
+
 
 conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='')
 cursor = conn.cursor()
@@ -23,15 +39,15 @@ if conn.is_connected():
 
 
 
-# fullname = "this works"
-# email ="emdhail"
-# comments = "comdhments"
+fullname = "this works"
+email ="emdhail"
+comments = "comdhments"
 
 
-form = cgi.FieldStorage()
-fullname = form.getvalue('fullname')
-email = form.getvalue('email')
-comments = form.getvalue('comments')
+# form = cgi.FieldStorage()
+# fullname = form.getvalue('fullname')
+# email = form.getvalue('email')
+# comments = form.getvalue('comments')
 # ^header error can be from this
 
 sql = """
