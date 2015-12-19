@@ -1,7 +1,8 @@
 -Scripts need redirects.
 
--All database scripts -> need redirects
-    -Registration for event
+-All database scripts -> need redirects ?
+    -Should I do redirects? This page looks good and functional
+    -Registration for event -> donish
     -comments -> donish
 
 -Login scripts, variables passing between pages, perhaps making pages with logins
