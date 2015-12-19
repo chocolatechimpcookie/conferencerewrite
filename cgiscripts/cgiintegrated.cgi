@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/python2
 print("Content-Type: text/html\n\n")  # html markup follows
 import urllib
 

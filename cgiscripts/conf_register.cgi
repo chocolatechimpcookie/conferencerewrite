@@ -15,7 +15,7 @@ import cgi, cgitb
 
 cgit.enable()
 
-conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='')
+conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='root')
 cursor = conn.cursor()
 
 if conn.is_connected():

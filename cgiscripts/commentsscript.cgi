@@ -1,5 +1,8 @@
-#!/usr/bin/env python3
+#!/usr/bin/python2
 
+
+
+#^THat path made it work
 print("Content-Type: text/html\n\n")  # html markup follows
 
 
@@ -7,14 +10,14 @@ print("Content-Type: text/html\n\n")  # html markup follows
 # but it won't send db
 #will execute by bash but not through the server in anyway
 
-print("""
-<html>
-  <Title>Hello in HTML</Title>
-<body>
-  <p>Hello There!</p>
-  <p><b>Hi There!</b></p>  
-</body>
-</html> """)
+# print("""
+# <html>
+#   <Title>Hello in HTML</Title>
+# <body>
+#   <p>Hello There!</p>
+#   <p><b>Hi There!</b></p>  
+# </body>
+# </html> """)
 
 #This will take the comments and send it to the database
 import mysql.connector
@@ -31,7 +34,7 @@ cgitb.enable()
 
 
 
-conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='')
+conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='root')
 cursor = conn.cursor()
 
 if conn.is_connected():
@@ -39,15 +42,15 @@ if conn.is_connected():
 
 
 
-fullname = "this works"
-email ="emdhail"
-comments = "comdhments"
+# fullname = "no it really works tho"
+# email ="emdhail"
+# comments = "comdhments"
 
 
-# form = cgi.FieldStorage()
-# fullname = form.getvalue('fullname')
-# email = form.getvalue('email')
-# comments = form.getvalue('comments')
+form = cgi.FieldStorage()
+fullname = form.getvalue('fullname')
+email = form.getvalue('email')
+comments = form.getvalue('comments')
 # ^header error can be from this
 
 sql = """
@@ -63,6 +66,9 @@ cursor.execute(sql, (fullname, email, comments))
 conn.commit()  
 cursor.close()
 conn.close()
+
+print("Location:../html/comments.html")
+
 
 # sql = """INSERT INTO `comments` (`id`, `name`, `email`, `comments`, `time`) VALUES (NULL, %s, %s, %s, CURRENT_TIMESTAMP)""" % (fullname, email, comments)
 # # the syntax of the passing is correct  for inserting a table, so why wont this work
