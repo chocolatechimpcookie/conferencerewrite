@@ -202,7 +202,7 @@ print("""
 if conn.is_connected():
     print("""
     <h1 class="page-header">Comment submitted.</h1>
-     <p>If you are not redirected, click <button><a href="../html/comments.html">here</a></button></p>
+     <p> <button><a href="../html/comments.html">here</a></button></p>
     
     
     </div>
@@ -226,6 +226,12 @@ else:
     """)
 cursor.close()
 conn.close()
+
+print('''Status: 303 See Other
+Location: ../html/comments.html
+Pragma: no-cache
+Content-Type: text/html
+''')
 
 
 # sql = """INSERT INTO `comments` (`id`, `name`, `email`, `comments`, `time`) VALUES (NULL, %s, %s, %s, CURRENT_TIMESTAMP)""" % (fullname, email, comments)

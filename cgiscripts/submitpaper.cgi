@@ -4,7 +4,7 @@
 
 #^THat path made it work
 print("Content-Type: text/html\n\n")  # html markup follows
-
+print("")
 
 #it prints html
 # but it won't send db
@@ -168,15 +168,35 @@ print("""
 
 """)
 
+#input variable that calculated if reviewer is logged in
+if(login_status)
+    print("""
+    <h1 class="page-header">Database error, <b>comment was not submitted.</b></h1>
+     <p>If you are not redirected, click <button><a href="../html/comments.html">here</a></button></p>
+    
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    """)
+#^submit file form 
 
-print("""
-<h1 class="page-header">Database error, <b>comment was not submitted.</b></h1>
- <p>If you are not redirected, click <button><a href="../html/comments.html">here</a></button></p>
 
 
-</div>
-</div>
-</div>
-</div>
-</body>
-""")
+
+
+else:
+    print("""
+    <h1 class="page-header">Database error, <b>comment was not submitted.</b></h1>
+     <p>If you are not redirected, click <button><a href="../html/comments.html">here</a></button></p>
+    
+    
+    </div>
+    </div>
+    </div>
+    </div>
+    </body>
+    """)
+#     please login^ string
