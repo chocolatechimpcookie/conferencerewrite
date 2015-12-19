@@ -1,0 +1,23 @@
+-Scripts need redirects.
+
+-All database scripts -> need redirects
+    -Registration for event
+    -comments -> donish
+
+-Login scripts, variables passing between pages, perhaps making pages with logins
+into php scripts themselves
+    -reviewer login
+    -admin login
+    -reviewer register , must check for same user
+
+-Admin DB page
+-security measures on forms
+
+-might want to make anything that needs to check something before entering
+into a python page anyway
+question is how to link it
+
+    -maybe make them all forms and the link into a button without
+    styling? I did it with the cancel button
+    Question is if I am going need to to type all that html or if there is a
+    shorter way to do it.
