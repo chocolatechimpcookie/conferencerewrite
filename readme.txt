@@ -1,2 +1,0 @@
--Please setup a sql database, note the sql files.
--Chmod +x all the cgi files

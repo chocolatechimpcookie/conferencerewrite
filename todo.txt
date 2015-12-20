@@ -3,17 +3,20 @@ Done:
     -Registration for event -> donish
     -comments -> donish
     -reviewer register -> checks for user
-
+    -All "dynamic" pages have been converted into .cgi files.
+    -
 
 Needs work:
     -reviewer login
     -admin login
         -Logins will eventually need to compare a login status
-        -Will need to save login status and person logged into a variable
+        -Will need to save login status and person logged into a variable, global
         -passing post values and changing what is there.
     -Scripts need redirects?
     -Admin DB page
     -reviewer upload and view upload
+        -Needs store locally
+        -Needs to store a reference to where items are stored locally
     -need to strip html and sql code from all forms
     -Anything that uses a global variable needs to be written into a script.
         -Means
