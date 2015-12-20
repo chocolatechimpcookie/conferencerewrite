@@ -1,3 +1,7 @@
+Global array solving?
+    I can always make it one file and change ID? How do I do this in python
+
+
 
 Done:
     -Registration for event -> donish

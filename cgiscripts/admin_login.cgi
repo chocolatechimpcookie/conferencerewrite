@@ -15,6 +15,7 @@ print('Content-Type: text/html\n\n')  # html markup follows
 #This will take the comments and send it to the database
 import mysql.connector
 import web
+import flask
 
 from mysql.connector import Error
 import cgi
@@ -30,6 +31,7 @@ import cgitb
 #glob variables
 
 cgitb.enable()
+log_man = LoginManager()
 
 
 print("""

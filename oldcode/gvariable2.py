@@ -1,0 +1,2 @@
+global gvariable
+print gvariable
