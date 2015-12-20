@@ -35,7 +35,7 @@ cgitb.enable()
 print("""
 <!DOCTYPE html>
 <head>
- <title>Admin Login</title>
+ <title>All logged out.</title>
     <link rel='stylesheet' type='text/css' href='../main.css'>
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
@@ -222,29 +222,13 @@ else:
     
     <div class="body_outline">
          <h1 class='page-header'>Admin Login</h1>
-         <h2>Welcome user
-    """)     
+    """)
+    config.globaluser = False;
     
     print(config.globaluser)
     print(""" 
-        </h2>
-        <h2>Would you like to logout? <a><button>Click here</button></>
-             <form method='post' action='admin_logresult.cgi'>
-                 <div class='form-group'>
-                     <label for='username'>Username</label>
-                     <input type='text' class='form-control' name='username' id='username'>
-                 </div>
-                 
-                 <div class='form-group'>
-                     <label for='password'>Password</label>
-                     <input class='form-control' type='password' name='password' id='password'/>
-                 </div>
-                 
-    
-                     <input style='cursor:pointer' type='submit' value='Submit' class='btn btn-success' />
-                     <input style='cursor:pointer' type='reset' class='btn btn-warning' />
-    
-             </form>
+        <h2>You are logged out!</h2>
+             
              
              </div>   
     </div>

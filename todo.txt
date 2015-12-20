@@ -11,7 +11,49 @@ Needs work:
     -admin login
         -Logins will eventually need to compare a login status
         -Will need to save login status and person logged into a variable, global
-        -passing post values and changing what is there.
+        -passing post values
+        -on page entrance
+            If global login variable available
+                -State user name
+                -also suggest logging out, on click
+                    -changes variable
+                    -refreshes page
+        -Loggin in
+            -Need to figure out how to do post on the same page
+            -check if user name exists -> basically registration logic used in reverse
+                if the array is empty -> there is no user name by that name
+                if the array has something -> compare password
+            -select row w user name then compare password
+            -store data to variable
+            -redirect to own page
+                -Apparently I can only do redirects before the header of a page
+                -Kind of ruins the whole idea honestly
+                -The only other way to do a redirect would be to login from html
+                then send the response on the cgi response. Since this would be a lot of work
+                when it comes to paths, I should just make other cgi pages
+                -How is there no simple refresh function?
+            -If I don't redirect to own page, I'm gonna have to use the html equivelant
+                Only issue is I lose the premature checking for login on the login page
+                Whole page is setup like it doesn't expect to have redirects, at least thats
+                what the html looks like.
+                I guess click to redirect?
+                
+                
+        **I'm still going need to use global variables even if I don't have a redirect**
+        **I'm still going to need to check variables before a page starts for some pages**
+        
+        **Big question is:
+            if I can't redirect pages and the user fills out a form on a cgi
+            how will I change text to let them know something happened?
+            I would probably have to make another cgi page and link them.
+            I won't change all the path names
+            I can make it cgi result, and then move all the logic there
+            
+                    
+        -post on the same page?
+        -Php equivelants
+            
+        
     -Scripts need redirects?
     -Admin DB page
     -reviewer upload and view upload

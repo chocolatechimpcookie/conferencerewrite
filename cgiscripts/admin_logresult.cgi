@@ -3,7 +3,7 @@
 
 
 #^THat path made it work
-print('Content-Type: text/html\n\n')  # html markup follows
+print("Content-Type: text/html\n\n")  # html markup follows
 
 
 #it prints html
@@ -18,8 +18,8 @@ import web
 
 from mysql.connector import Error
 import cgi
-import cgitb
 
+# import mod
 
 #chi and cgitb are for cgi handling
 # app = web.application(urls, globals())
@@ -104,7 +104,7 @@ print("""
 				<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Administration<span class='caret'></span></a>
 				<ul class='dropdown-menu'>
 					<li><a href='admin_login.cgi' id='adminlog_link_wide'> <span class='nested_text' id='adminlog_text_wide'>Login</span></a></li>
-					<li><a href='admin_manage.cgi'> <span class='nested_text'>Management</span></a></li>
+					<li><a href="admin_manage.cgi"> <span class='nested_text'>Management</span></a></li>
 				</ul>
 			</li>
 			
@@ -163,7 +163,7 @@ print("""
 			<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Administration<span class='caret'></span></a>
 			<ul class='dropdown-menu'>
 				<li><a href='admin_login.cgi' id='adminlog_link_mob'> <span class='nested_text' id='adminlog_text_mob'>Login</span></a></li>
-				<li><a href='admin_manage.cgi'> <span class='nested_text'>Management</span></a></li>
+				<li><a href="admin_manage.cgi"> <span class='nested_text'>Management</span></a></li>
 			</ul>
 		</li>
 		
@@ -174,88 +174,83 @@ print("""
 
 """)
 
-# print('Location: ../index.html');
+# print("Location: ../index.html");
 # print
 #the form needs to be here if I plan on having redirects
 #need global variables regardless.
 
-#top of page detects if logged in and suggests logging in as someone else AND a logout
-#link
 
-if config.globaluser == True:
-    print("""
+conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='root')
+if conn.is_connected():
+    cursor = conn.cursor()
+    form = cgi.FieldStorage()
+    username = form.getvalue('username')
+    password = form.getvalue('password')
     
-    <div class="body_outline">
-         <h1 class='page-header'>Admin Login</h1>
+    check_existence = """
+        SELECT username FROM members WHERE username = %s
+    """
+
+    cursor.execute(check_existence, (username,))
+
+    if not(cursor.fetchall()):
+        print("""
+         <h1 class="page-header"><b>This username has not been registered. Please contact the admin.</b></h1>
+         <p><button><a href="admin_login.cgi">Click to redirect to login page.</a></button></p>
          
-     
-             <form method='post' action='admin_logresult.cgi'>
-                 <div class='form-group'>
-                     <label for='username'>Username</label>
-                     <input type='text' class='form-control' name='username' id='username'>
-                 </div>
-                 
-                 <div class='form-group'>
-                     <label for='password'>Password</label>
-                     <input class='form-control' type='password' name='password' id='password'/>
-                 </div>
-                 
-    
-                     <input style='cursor:pointer' type='submit' value='Submit' class='btn btn-success' />
-                     <input style='cursor:pointer' type='reset' class='btn btn-warning' />
-    
-             </form>
-             
-             </div>   
-    </div>
-    </div>   
-    </div>
-    <!--^container-fluid, parent row, outer and parent col-xs-12-->
-    
-    
-    </body>
-     </div>
-    """)     
-
+         
+        </div>
+        </div>
+        </div>
+        </div>
+        </body>
+        """)        
+    else:
+        
+        #check pass here
+        #gonna need if else for wrong passwords
+        checkpassword = """
+        SELECT username FROM `members` WHERE username= %s and password = %s
+        """
+        cursor.execute(check_existence, (username, password))
+        if not(cursor.fetchall()):
+            print("""    
+            <h1 class="page-header">Password or username is incorrect: <b>login was not completed.</b></h1>
+             <p><button><a href="admin_login.cgi">Click here to redirect.</a></button></p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </body>
+            """)
+        else:
+            print("""
+            <h1 class="page-header">You are now logged in!: <b>login was not completed.</b></h1>
+             <p><button><a href="admin_login.cgi">Click here to redirect.</a></button></p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </body>      
+            """)
+        # config.globaluser = username
+        cursor.close()
+        conn.close()
 else:
     print("""
+    <h1 class="page-header">Database error, <b>login was not completed.</b></h1>
+     <p><button><a href="admin_login.cgi">Click here to redirect</a></button></p>
     
-    <div class="body_outline">
-         <h1 class='page-header'>Admin Login</h1>
-         <h2>Welcome user
-    """)     
     
-    print(config.globaluser)
-    print(""" 
-        </h2>
-        <h2>Would you like to logout? <a><button>Click here</button></>
-             <form method='post' action='admin_logresult.cgi'>
-                 <div class='form-group'>
-                     <label for='username'>Username</label>
-                     <input type='text' class='form-control' name='username' id='username'>
-                 </div>
-                 
-                 <div class='form-group'>
-                     <label for='password'>Password</label>
-                     <input class='form-control' type='password' name='password' id='password'/>
-                 </div>
-                 
-    
-                     <input style='cursor:pointer' type='submit' value='Submit' class='btn btn-success' />
-                     <input style='cursor:pointer' type='reset' class='btn btn-warning' />
-    
-             </form>
-             
-             </div>   
     </div>
-    </div>   
     </div>
-    <!--^container-fluid, parent row, outer and parent col-xs-12-->
-    
-    
+    </div>
+    </div>
     </body>
-     </div>
-    """) 
+    """)
+
+
+
 
 
 
