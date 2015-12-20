@@ -67,7 +67,7 @@ It\'s out container because its outside the container
 			<li role=\'presentation\' class=\'dropdown\'>
 				<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\'>Reviewer<span class=\'caret\'></span></a>
 				<ul class=\'dropdown-menu\'>
-					<li><a href=\'reviewer_login.html\' id=\'reviewerlog_link_wide\'> <span class=\'nested_text\' id=\'reviewerlog_text_wide\'>Login</span></a></li>
+					<li><a href=\'reviewer_login.cgi\' id=\'reviewerlog_link_wide\'> <span class=\'nested_text\' id=\'reviewerlog_text_wide\'>Login</span></a></li>
 					<li><a href=\'reviewer_reg.html\' > <span class=\'nested_text\'>Registration</span></a></li>
 					<li><a href=\'submitpaper.html\'> <span class=\'nested_text\'>Submit Paper</span></a></li>
 				</ul>
@@ -127,7 +127,7 @@ It\'s out container because its outside the container
 		<li role=\'presentation\' class=\'dropdown\'>
 			<a class=\'dropdown-toggle\' data-toggle=\'dropdown\' href=\'#\' role=\'button\'>Reviewer<span class=\'caret\'></span></a>
 			<ul class=\'dropdown-menu\'>
-				<li><a href=\'reviewer_login.html\' id=\'reviewerlog_link_mob\'> <span class=\'nested_text\' id=\'reviewerlog_text_mob\'>Login</span></a></li>
+				<li><a href=\'reviewer_login.cgi\' id=\'reviewerlog_link_mob\'> <span class=\'nested_text\' id=\'reviewerlog_text_mob\'>Login</span></a></li>
 				<li><a href=\'reviewer_reg.html\' > <span class=\'nested_text\'>Registration</span></a></li>
 				<li><a href=\'submitpaper.html\'> <span class=\'nested_text\'>Submit Paper</span></a></li>
 			</ul>

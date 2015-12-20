@@ -88,17 +88,17 @@ print("""
 			<li role='presentation' class='dropdown'>
 				<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Reviewer<span class='caret'></span></a>
 				<ul class='dropdown-menu'>
-					<li><a href='../html/reviewer_login.html' id='reviewerlog_link_wide'> <span class='nested_text' id='reviewerlog_text_wide'>Login</span></a></li>
+					<li><a href='reviewer_login.cgi' id='reviewerlog_link_wide'> <span class='nested_text' id='reviewerlog_text_wide'>Login</span></a></li>
 					<li><a href='../html/reviewer_reg.html' > <span class='nested_text'>Registration</span></a></li>
-					<li><a href='../html/submitpaper.html'> <span class='nested_text'>Submit Paper</span></a></li>
+					<li><a href='submitpaper.cgi'> <span class='nested_text'>Submit Paper</span></a></li>
 				</ul>
 			</li>
 			
 			<li role='presentation' class='dropdown'>
 				<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Administration<span class='caret'></span></a>
 				<ul class='dropdown-menu'>
-					<li><a href='../html/admin_login.html' id='adminlog_link_wide'> <span class='nested_text' id='adminlog_text_wide'>Login</span></a></li>
-					<li><a href='../html/admin_manage.html'> <span class='nested_text'>Management</span></a></li>
+					<li><a href='admin_login.cgi' id='adminlog_link_wide'> <span class='nested_text' id='adminlog_text_wide'>Login</span></a></li>
+					<li><a href="admin_manage.cgi"> <span class='nested_text'>Management</span></a></li>
 				</ul>
 			</li>
 			
@@ -147,17 +147,17 @@ print("""
 		<li role='presentation' class='dropdown'>
 			<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Reviewer<span class='caret'></span></a>
 			<ul class='dropdown-menu'>
-				<li><a href='../html/reviewer_login.html' id='reviewerlog_link_mob'> <span class='nested_text' id='reviewerlog_text_mob'>Login</span></a></li>
+				<li><a href='reviewer_login.cgi' id='reviewerlog_link_mob'> <span class='nested_text' id='reviewerlog_text_mob'>Login</span></a></li>
 				<li><a href='../html/reviewer_reg.html' > <span class='nested_text'>Registration</span></a></li>
-				<li><a href='../html/submitpaper.html'> <span class='nested_text'>Submit Paper</span></a></li>
+				<li><a href='submitpaper.cgi'> <span class='nested_text'>Submit Paper</span></a></li>
 			</ul>
 		</li>
 		
 		<li role='presentation' class='dropdown'>
 			<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Administration<span class='caret'></span></a>
 			<ul class='dropdown-menu'>
-				<li><a href='../html/admin_login.html' id='adminlog_link_mob'> <span class='nested_text' id='adminlog_text_mob'>Login</span></a></li>
-				<li><a href='../html/admin_manage.html'> <span class='nested_text'>Management</span></a></li>
+				<li><a href='admin_login.cgi' id='adminlog_link_mob'> <span class='nested_text' id='adminlog_text_mob'>Login</span></a></li>
+				<li><a href="admin_manage.cgi"> <span class='nested_text'>Management</span></a></li>
 			</ul>
 		</li>
 		
@@ -170,8 +170,10 @@ print("""
 
 
 print("""
-<h1 class="page-header">Database error, <b>comment was not submitted.</b></h1>
- <p>If you are not redirected, click <button><a href="../html/comments.html">here</a></button></p>
+   <div class="body_outline">
+<h2 class="page-header">Admin Database Management</h2>
+    
+    
 
 
 </div>

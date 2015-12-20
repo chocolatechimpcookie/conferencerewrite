@@ -4,7 +4,7 @@
 
 #^THat path made it work
 print("Content-Type: text/html\n\n")  # html markup follows
-print("")
+
 
 #it prints html
 # but it won't send db
@@ -168,43 +168,27 @@ print("""
 
 """)
 
-#input variable that calculated if reviewer is logged in
 
 print("""
-<div class="body_outline">
-	<h2 class="page-header">Submit a Paper!</h2>
+   <div class="body_outline">
+<h2 class="page-header">Admin Login</h2>
+    
+    
 <form method="post">
-			<div class="form-group">
-				<label for="paper_title">Paper Title</label>
-				<input type="text" class="form-control" name="paper_title" id="paper_title">
-			</div>
-			
-			<div class="form-group">
-				<label for="authors">Authors</label>
-				<input type="text" class="form-control" name="authors" id="authors">
-			</div>
-					
-			<div class="form-group">
-				<label for="affiliation">Affiliation</label>
-				<input type="text" class="form-control" name="affiliation" id="affiliation">
-			</div>
-							
-			<div class="form-group">
-				<label for="email">Email</label>
-				<input type="email" class="form-control" name="email" id="email">
-			</div>
-									
-			<div class="form-group">
-				<label for="upload_file">Upload File</label>
-				<input type="file" class="form-control" name="upload_file" id="upload_file">
-			</div>
-			
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" name="username" id="username">
+		</div>
+		
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input class="form-control" type="password" name="password" id="password"/>
+		</div>
+		
 	
 			
-		
-				
-			<input style="cursor:pointer" type="submit" value="Submit" class="btn btn-success" />
-			<input style="cursor:pointer" type="reset" />
+		<input style="cursor:pointer" type="submit" value="Submit" class="btn btn-success" />
+		<input style="cursor:pointer" type="reset" class="btn btn-warning" />
 		</form>
 
 </div>

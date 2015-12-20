@@ -1,24 +1,37 @@
--Scripts need redirects.
 
--All database scripts -> need redirects ?
-    -Should I do redirects? This page looks good and functional
+Done:
     -Registration for event -> donish
     -comments -> donish
+    -reviewer register -> checks for user
 
--Login scripts, variables passing between pages, perhaps making pages with logins
-into php scripts themselves
+
+Needs work:
     -reviewer login
     -admin login
-    -reviewer register , must check for same user
-
--Admin DB page
--security measures on forms
-
--might want to make anything that needs to check something before entering
-into a python page anyway
-question is how to link it
-
-    -maybe make them all forms and the link into a button without
-    styling? I did it with the cancel button
-    Question is if I am going need to to type all that html or if there is a
-    shorter way to do it.
+        -Logins will eventually need to compare a login status
+        -Will need to save login status and person logged into a variable
+        -passing post values and changing what is there.
+    -Scripts need redirects?
+    -Admin DB page
+    -reviewer upload and view upload
+    -need to strip html and sql code from all forms
+    -Anything that uses a global variable needs to be written into a script.
+        -Means
+            -reviewer login
+            -admin login
+            -admin db
+            -reviewer upload and view upload
+        -maybe make them all forms and the link into a button without
+        styling? I did it with the cancel button and in the original
+        Question is if I am going need to to type all that html or if there is a
+        shorter way to do it.
+        
+        -Also comes to the question of it is no problem sending post requests from within the site that I am on.
+        
+    
+    
+-HCI, maybe relay this to the original front end only version:
+    -Perhaps regular container for larger settings
+    and make fixed container for mobile., or at least just for forms.
+    
+    -....eh, doesn't make a big difference

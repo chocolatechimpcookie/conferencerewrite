@@ -15,15 +15,9 @@ import cgi, cgitb
 cgitb.enable()
 
 
-
-# 1) Needs to pull entered form data
+#work to be done
 # 2) strip sql and html
-# 3) compare username with what is on file
-# 4) If good
-#         passed through
-#     if bad
-#         This is wrong, restart page
-#             -link to beginning of page
+
 
 
 
@@ -91,17 +85,17 @@ print("""
 			<li role='presentation' class='dropdown'>
 				<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Reviewer<span class='caret'></span></a>
 				<ul class='dropdown-menu'>
-					<li><a href='../html/reviewer_login.html' id='reviewerlog_link_wide'> <span class='nested_text' id='reviewerlog_text_wide'>Login</span></a></li>
+					<li><a href='reviewer_login.cgi' id='reviewerlog_link_wide'> <span class='nested_text' id='reviewerlog_text_wide'>Login</span></a></li>
 					<li><a href='../html/reviewer_reg.html' > <span class='nested_text'>Registration</span></a></li>
-					<li><a href='../html/submitpaper.html'> <span class='nested_text'>Submit Paper</span></a></li>
+					<li><a href='submitpaper.cgi'> <span class='nested_text'>Submit Paper</span></a></li>
 				</ul>
 			</li>
 			
 			<li role='presentation' class='dropdown'>
 				<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Administration<span class='caret'></span></a>
 				<ul class='dropdown-menu'>
-					<li><a href='../html/admin_login.html' id='adminlog_link_wide'> <span class='nested_text' id='adminlog_text_wide'>Login</span></a></li>
-					<li><a href='../html/admin_manage.html'> <span class='nested_text'>Management</span></a></li>
+					<li><a href='admin_login.cgi' id='adminlog_link_wide'> <span class='nested_text' id='adminlog_text_wide'>Login</span></a></li>
+					<li><a href="admin_manage.cgi"> <span class='nested_text'>Management</span></a></li>
 				</ul>
 			</li>
 			
@@ -150,17 +144,17 @@ print("""
 		<li role='presentation' class='dropdown'>
 			<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Reviewer<span class='caret'></span></a>
 			<ul class='dropdown-menu'>
-				<li><a href='../html/reviewer_login.html' id='reviewerlog_link_mob'> <span class='nested_text' id='reviewerlog_text_mob'>Login</span></a></li>
+				<li><a href='reviewer_login.cgi' id='reviewerlog_link_mob'> <span class='nested_text' id='reviewerlog_text_mob'>Login</span></a></li>
 				<li><a href='../html/reviewer_reg.html' > <span class='nested_text'>Registration</span></a></li>
-				<li><a href='../html/submitpaper.html'> <span class='nested_text'>Submit Paper</span></a></li>
+				<li><a href='submitpaper.cgi'> <span class='nested_text'>Submit Paper</span></a></li>
 			</ul>
 		</li>
 		
 		<li role='presentation' class='dropdown'>
 			<a class='dropdown-toggle' data-toggle='dropdown' href='#' role='button'>Administration<span class='caret'></span></a>
 			<ul class='dropdown-menu'>
-				<li><a href='../html/admin_login.html' id='adminlog_link_mob'> <span class='nested_text' id='adminlog_text_mob'>Login</span></a></li>
-				<li><a href='../html/admin_manage.html'> <span class='nested_text'>Management</span></a></li>
+				<li><a href='admin_login.cgi' id='adminlog_link_mob'> <span class='nested_text' id='adminlog_text_mob'>Login</span></a></li>
+				<li><a href="admin_manage.cgi"> <span class='nested_text'>Management</span></a></li>
 			</ul>
 		</li>
 		
