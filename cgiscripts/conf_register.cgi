@@ -83,7 +83,7 @@ conn.commit()
 print("""
 <!DOCTYPE html>
 <head>
- <title>Comment Submission Status</title>
+ <title>Conference Registration</title>
     <link rel='stylesheet' type='text/css' href='../main.css'>
     <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
     	<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js'></script>
