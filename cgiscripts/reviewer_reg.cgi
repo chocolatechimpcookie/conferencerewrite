@@ -12,8 +12,7 @@ from mysql.connector import Error
 import cgi, cgitb
 
 
-conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='root')
-cursor = conn.cursor()
+cgitb.enable()
 
 
 
@@ -173,54 +172,40 @@ print("""
 """)
 
 
-
-form = cgi.FieldStorage()
-username = form.getvalue('username')
-password = form.getvalue('password')
-
-
-check_existence = """
-				SELECT username FROM `members` WHERE username='%s'
-"""
-
-#check user existence now will hold some sort of array probably, follow down execute
-#and whatever method interacts iwth my sql
-#there will be  avariable that holds number of matches
-
-check_existence = cursor.execute(check_existence, (username))
-matches = cursor.rowcount  
+#   weird syntax   
+# 
+# cursor.execute(check_existence, username)
+#    =>  483                     "Wrong number of arguments during string formatting")
+# cursor.execute(check_existence, (username))
+#   ^pushes down to con.commit
 
 
-#needs to check if user name exists
-#needs to tell user if it exists
-#if it doesnt exist, need to put it in db
+#  says cursor.rowcount is not callible
+# matches = cursor.rowcount
+#why is row count = -1
+# if not(cursor.fetchall()):
+#     print "Empty"           >> Create user
+# else:
+#     print "something inside" >>dont create user
 
-#what type of variable
+
+#Also note, checking if con.is_connected after  cursor.execute messes it up for some reason, it returns false but it'll still send data to mysql
 
 
-#should I bother checking for db?
-#also need if else for 
+conn = mysql.connector.connect(host='localhost', database='alicinamemar', user='root', password='root')
+if conn.is_connected():
+    cursor = conn.cursor()
+    form = cgi.FieldStorage()
+    username = form.getvalue('username')
+    password = form.getvalue('password')
+    
+    check_existence = """
+        SELECT username FROM members WHERE username = %s
+    """
 
-# variable does
-# #                "
-# 				SELECT username FROM `members` WHERE username='%s'
-#                 "
-hold
+    cursor.execute(check_existence, (username,))
 
-if conn.is_connected():     
-    if(matches >=1):
-        print("""
-        <h1 class="page-header">Database error, <b>registration was not completed.</b></h1>
-         <p>If you are not redirected, click <button><a href="../html/comments.html">here</a></button></p>
-        
-        
-        </div>
-        </div>
-        </div>
-        </div>
-        </body>
-        """)
-    else:
+    if not(cursor.fetchall()):
         sql = """
         INSERT INTO 
             members 
@@ -228,13 +213,26 @@ if conn.is_connected():
         VALUES 
             (NULL, %s, %s)
         """
-        
         cursor.execute(sql, (username, password))
         conn.commit()
-
+        
+        cursor.close()
+        conn.close()
+        
         print("""
         <h1 class="page-header"><b>Registration was completed.</b></h1>
          <p><button><a href="../html/reviewer_reg.html">Click to redirect.</a></button></p>
+         
+        </div>
+        </div>
+        </div>
+        </div>
+        </body>
+        """)        
+    else:
+        print("""
+        <h1 class="page-header">That username has already been chosen: <b>registration was not completed.</b></h1>
+         <p><button><a href="../html/reviewer_reg">Click here to redirect.</a></button></p>
         
         
         </div>
@@ -243,10 +241,13 @@ if conn.is_connected():
         </div>
         </body>
         """)
+
+        cursor.close()
+        conn.close()
 else:
     print("""
     <h1 class="page-header">Database error, <b>registration was not completed.</b></h1>
-     <p>If you are not redirected, click <button><a href="../html/reviewer_reg.html">here</a></button></p>
+     <p><button><a href="../html/reviewer_reg.html">Click here to redirect</a></button></p>
     
     
     </div>
@@ -255,10 +256,3 @@ else:
     </div>
     </body>
     """)
-
-
-
-
-cursor.close()
-conn.close()
-

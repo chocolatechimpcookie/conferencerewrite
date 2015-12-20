@@ -53,8 +53,6 @@ sql = """
         (NULL, %s, %s, %s, CURRENT_TIMESTAMP)
 """
 cursor.execute(sql, (fullname, email, comments))
-
-
 conn.commit()  
 
 
